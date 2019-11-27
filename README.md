@@ -1,4 +1,4 @@
-# shakepoint-landing
+# Shakepoint Landing Page
 
 ## Project setup
 ```
