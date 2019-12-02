@@ -11,7 +11,7 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
             <a class="nav-link" href="#nosotros" v-smooth-scroll>Nosotros</a>
-            <a class="nav-link" href="#pasos" v-smooth-scroll>Funcion</a>
+            <a class="nav-link" href="#pasos" v-smooth-scroll>Función</a>
             <a class="nav-link" href="#contacto" v-smooth-scroll>Contacto</a>
             <b-nav-item to="/" disabled>Miembros</b-nav-item>
           </b-navbar-nav>

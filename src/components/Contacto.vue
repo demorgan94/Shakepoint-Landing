@@ -6,7 +6,7 @@
           <img src="../assets/phone.png" alt="Phone Image" class="img-fluid" id="phoneImage"/>
         </b-col>
         <b-col sm="12" md="6" class="text-center">
-          <b-form>
+          <b-form >
             <b-form-group>
               <b-form-input id="nombreInput" type="text" required placeholder="Nombre"></b-form-input>
             </b-form-group>
@@ -41,6 +41,7 @@ export default {
   background-image: url("../assets/bg_contacto.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: left top;
   display: flex;
   align-items: center;
   height: 100vh;
@@ -74,9 +75,23 @@ export default {
   display: inline;
 }
 
+@media (max-width: 1250px){
+    #contacto {
+    height: auto;
+    background-size: cover;
+  }
+}
+
 @media (max-width: 768px) {
   #phoneImage {
   display: none;
-}
+  }
+  #contacto {
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-size: cover;
+    background-position:35% 75%;
+  }
 }
 </style>

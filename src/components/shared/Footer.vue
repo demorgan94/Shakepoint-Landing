@@ -3,7 +3,7 @@
     <b-container fluid class="text-center">
       <b-row align-v="center" align-h="center">
         <b-col sm="12" md="6">
-          <div class="wrapper text-left ml-4" id="lText">
+          <div class="wrapper ml-4" id="lText">
             <b-container class="pr-5">
               <p class="text-white">
                 Shakepoint funciona por sociedad. Si te interesa ser parte de un nuevo futuro,
@@ -58,21 +58,15 @@ import $ from "jquery";
 export default {
   name: "Footer"
 };
-
+$(document).ready(function() {
+  mediaSize()
+});
 function mediaSize() {
-  if (window.matchMedia("(min-width: 767px)").matches) {
-    $("#lText").addClass("text-left");
-    $("#lText").removeClass("text-center");
-    $(".wrapper2, .social-media").removeClass("p-5");
-    $("#fIcon").addClass("mb-2");
-    $("#iIcon").addClass("mt-2");
-  } else {
-    $("#lText").addClass("text-center");
-    $("#lText").removeClass("text-left");
-    $(".wrapper2, .social-media").addClass("p-5");
-    $("#fIcon").removeClass("mb-2");
-    $("#iIcon").removeClass("mt-2");
-  }
+  $('#lText').toggleClass('text-left', window.matchMedia('(min-width: 767px)').matches);
+  $('#lText').toggleClass('text-center', window.matchMedia('(max-width: 766px)').matches);
+  $('#fIcon').toggleClass('mb-2', window.matchMedia('(min-width: 767px)').matches);
+  $('#iIcon').toggleClass('mt-2', window.matchMedia('(min-width: 767px)').matches);
+  $('.wrapper2, .social-media').toggleClass('p-5', window.matchMedia('(max-width: 766px)').matches);
 }
 
 mediaSize();
