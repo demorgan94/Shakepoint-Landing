@@ -23,13 +23,12 @@
 
 <script>
   import $ from 'jquery';
-
   export default {
     name: "Navbar"
   }
 
   $(window).scroll(function () {
-    $('nav').toggleClass('scrolled', $(this).scrollTop() > 1000);
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 950);
   });
 </script>
 
@@ -45,6 +44,9 @@
 
   .scrolled {
     background-color: rgb(39, 39, 39);
+    -webkit-transition: background-color 400ms linear;
+    -ms-transition: background-color 400ms linear;
+    transition: background-color 400ms linear;
     z-index: 9;
   }
 </style>
